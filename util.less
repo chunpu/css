@@ -1,0 +1,41 @@
+/*
+ * util.less
+ * for basic & quick usage
+ */
+
+.block {
+  display: block;
+}
+
+// simple no wrap
+// TODO: check the block element
+.nowrap, .nowrap * { // all elements in .nowrap
+  white-space: nowrap; // inline
+  overflow: hidden; 
+  text-overflow: ellipsis; // new browser support, base on overflow
+}
+
+// contrast (less), invert (filter)
+.contrast {
+  color: #fff; // may be var one day
+  p {
+    color: inherit; // in case of p is colored
+  }
+  a:hover, .selected, .active {
+    color: @bright; // hover, selected, active should use bright in the contrast
+  }
+}
+
+// simple sub title or other
+.sub {
+  color: #666; // will change
+  // why I write here, forgot..
+  .contrast&, .contrast & {
+    color: #ccc;
+  }
+}
+
+// simple line-height
+.lh {
+  line-height: 32px; // will be var
+}

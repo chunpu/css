@@ -1,0 +1,18 @@
+/*
+ * theme.less
+ * define color
+ * all color should be hsl
+ * all color rely on the main color
+ */
+
+@green: hsl(80, 100%, 31%);
+@cyan: hsl(180, 100%, 31%);
+
+// green is the default
+@color: @green;
+
+// bright color, may used in dark area
+@bright: lighten(@color, 15%);
+
+// dark color, may use in sub area
+@darken: darken(@color, 15%);

@@ -1,0 +1,25 @@
+// opacity
+// may change to mixin
+.opacity {
+  @h: 28px;
+  color: #fff;
+  width: 100%;
+  height: @h;
+  line-height: @h;
+  opacity: .6;
+  .bg {
+    background: #000;
+  }
+  span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  &:hover {
+    opacity: 1;  
+    .bg {
+      opacity: .7;
+    }
+  }
+}

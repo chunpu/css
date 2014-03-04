@@ -1,0 +1,23 @@
+/*
+ * simple input
+ */
+
+// input[text]
+input[type="text"], input[type="password"] {
+  @input-h: 30px;
+
+  display: block;
+  width: 100%;
+  text-indent: 9px;
+  height: @input-h;
+  padding: 4px 0;
+  line-height: 1.4;
+  font-size: 14px;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  &:focus {
+    color: darken(@green, 13%);
+    border-color: @green;
+  }
+}

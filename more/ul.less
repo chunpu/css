@@ -1,0 +1,23 @@
+ul.padding li {
+  padding: 5px 0;
+}
+ul.dotted li {
+  border-bottom: 1px dotted #ccc;
+}
+ul.number li:before {
+  display: inline-block;
+  color: #fff;
+  background: @green;
+  width: 17px;
+  text-align: center;
+  content: attr(data-li); // will add old support
+  margin-right: 5px;
+}
+ul.dot li:before {
+  display: inline-block;
+  color: @green;
+  width: 17px;
+  text-align: center;
+  content: '▪'; // will change to '/xxx'
+  margin-right: 5px;
+}
