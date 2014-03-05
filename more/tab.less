@@ -1,0 +1,63 @@
+.tab {
+  a {
+    display: inline-block;
+  }
+}
+
+// all the name below is shit
+
+.tab.tab-border {
+  a {
+    line-height: 25px;
+    background: #f8f8f8;
+    padding: 0 15px;
+    border: 1px solid hsl(0, 0%, 91%);
+    border-left: 0;
+    &:first-child {
+      border-left: 1px solid hsl(0, 0%, 91%);
+    }
+    &.selected {
+      color: @color;
+      border-top: 2px solid @color;
+      position: relative;
+      border-bottom: 1px solid #fff;
+      top: 1px;
+    }
+  }
+}
+
+.tab.tab-bottom {
+  display: inline-block;
+  border-bottom: 2px solid hsl(0, 0%, 90%);
+  a {
+    line-height: 30px;
+    padding: 0 10px;
+    margin-left: 20px;
+    position: relative;
+    top: 2px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &.selected, &:hover {
+      border-bottom: 3px solid @color;
+    }
+  }
+}
+
+.tab.tab-top {
+  display: inline-block;
+  border-top: 2px solid hsl(0, 0%, 90%);
+  a {
+    line-height: 38px;
+    padding: 0 10px;
+    margin-left: 20px;
+    position: relative;
+    top: -1px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &.selected, &:hover {
+      border-top: 3px solid @color;
+    }
+  }
+}
