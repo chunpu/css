@@ -1,0 +1,22 @@
+/*
+ * ie support
+ * 
+ */
+
+@ie: false; // default not support ie
+
+/*
+ * use extend option to support ie
+ * here is an example
+ * why split clearfix
+ * only because I don't know how to write inline css rule use `when`
+ */
+
+.clearfix() when(@ie) {
+  *zoom: 1;
+}
+
+.text-overflow() when(@ie) {
+  // ie6
+  width: 100%;
+}
