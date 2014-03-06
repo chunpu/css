@@ -1,0 +1,25 @@
+.text-shadow(@color: @color; @size: 0.5em) {
+  // size is not important, color come first
+  // #fff is pretty in most cases, but we still not matter the color
+  text-shadow: 0 0 @size @color;
+}
+
+.text-shadow-bright(@color: @color) {
+ // text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px @color, 0 0 70px @color;
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em lighten(@color, 40%), 0 0 0.4em lighten(@color, 20%), 0 0 0.8em @color, 0 0 1.6em darken(@color, 20%);
+}
+
+.text-shadow-emboss(@color: @color) {
+  // 浮雕
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.8);
+  // hesitate if add a opacity: 0.5, and color seems no use
+}
+
+.text-shadow-deboss(@color: @color) {
+  // 凹陷
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.text-shadow-3d() {
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}

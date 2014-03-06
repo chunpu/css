@@ -45,3 +45,12 @@
   -ms-user-select: @v;
   user-select: @v;
 }
+
+.opacity(@v) {
+  opacity: @v;
+  // for ie8-
+  @value4ie: (@v * 100);
+  filter: ~"alpha(opacity=@{value4ie})";
+}
+
+@import "mixin/text-shadow.less";
