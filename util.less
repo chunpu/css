@@ -12,7 +12,6 @@
 .text-overflow, .text-overflow * { // all elements in .nowrap
   .text-overflow();
 }
-
 // contrast (less), invert (filter)
 .contrast {
   color: #fff; // may be var one day
@@ -41,4 +40,9 @@
 // simple color
 .color {
   color: @color;
+}
+
+.user-select {
+  // because when we use user-select, we use none
+  .user-select;
 }

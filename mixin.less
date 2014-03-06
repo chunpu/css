@@ -38,3 +38,10 @@
   text-overflow: @text-overflow;
   white-space: nowrap;
 }
+
+.user-select(@v: none) {
+  -webkit-user-select: @v;
+  -moz-user-select: @v;
+  -ms-user-select: @v;
+  user-select: @v;
+}

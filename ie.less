@@ -3,20 +3,24 @@
  * 
  */
 
-@ie: false; // default not support ie
+@ie: true; // default not support ie
+
+// fix mixin for ie
 
 /*
  * use extend option to support ie
  * here is an example
- * why split clearfix
- * only because I don't know how to write inline css rule use `when`
  */
+.ie() when(@ie) {
 
-.clearfix() when(@ie) {
-  *zoom: 1;
+  .clearfix() {
+    *zoom: 1;
+  }
+
+  .text-overflow {
+    // ie6
+    width: 100%;
+  }
 }
 
-.text-overflow() when(@ie) {
-  // ie6
-  width: 100%;
-}
+.ie();

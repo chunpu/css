@@ -7,8 +7,15 @@
 // only new browsers, use v1 for old
 @import (less) "normalize/v3.css";
 
+// var.less (size & weight & ...)
+@import "var.less";
+
 // mixin.less first
 @import "mixin.less";
+
+// ie.less (fuck ie)
+// because ie fix mixin, it should in the front
+@import "ie.less";
 
 // self reset.less
 @import "reset.less";
@@ -19,14 +26,10 @@
 // theme.less (color)
 @import "theme.less";
 
-// var.less (size & weight & ...)
-@import "var.less";
-
 // more.less (more detail)
 @import "more.less";
 
 // demo.less (only use in demo)
 @import "demo.less";
 
-// ie.less (fuck ie)
-@import "ie.less";
+
