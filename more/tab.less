@@ -1,7 +1,21 @@
 .tab {
   a {
-    display: inline-block;
+    .inline-block;
   }
+  // simple to use top and bottom border
+  // may have space between them, if not care
+  li {
+    display: inline;
+  }
+}
+
+.tab-float {
+  // this should be float, no space for inline
+  li {
+    float: left;
+  }
+  // need clearfix here
+  .clearfix;
 }
 
 // all the name below is shit
@@ -32,16 +46,19 @@
   a {
     line-height: 30px;
     padding: 0 10px;
-    margin-left: 20px;
     position: relative;
     top: 2px;
-    &:first-child {
-      margin-left: 0;
-    }
     &.selected, &:hover {
       border-bottom: 3px solid @color;
     }
   }
+  li {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  } 
+
 }
 
 .tab.tab-top {
@@ -50,14 +67,17 @@
   a {
     line-height: 38px;
     padding: 0 10px;
-    margin-left: 20px;
     position: relative;
     top: -1px;
-    &:first-child {
-      margin-left: 0;
-    }
     &.selected, &:hover {
       border-top: 3px solid @color;
+    }
+
+  }
+  li {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
     }
   }
 }
