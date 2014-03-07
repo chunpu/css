@@ -22,15 +22,46 @@ a {
 
 blockquote {
   padding-left: 20px;
-  border-left: 3px solid orange;
+  border-left: 5px solid #FFC5C5;
   margin: 10px 0;
+  padding-bottom: 1px;
 }
 
 pre {
-    font-family: Consolas;
-    border-left: 5px solid #ddd;
-    padding: 9.5px;
-    background-color: #f8f8f8;
-    overflow-x: auto;
-    .shadow;
+  font-family: Consolas;
+  border-left: 5px solid #ddd;
+  padding: 9.5px;
+  background-color: #f8f8f8;
+  overflow-x: auto;
+  .shadow;
+}
+
+code {
+  font-family: Consolas, 微软雅黑;
+}
+
+blockquote code {
+  background: rgb(245, 209, 209);
+  padding: 0 2px;
+  color: #eb7a00;;
+}
+
+blockquote blockquote {
+  font-size: 0.9em;
+  color: #666;
+}
+
+// code highlight
+
+.xml {
+  color: #8A8EB6;
+}
+.hljs-title {
+  color: rgb(158, 44, 49);
+}
+.hljs-value {
+  color: rgb(235, 122, 0);
+}
+.hljs-attribute {
+  color: green;
 }
