@@ -1,0 +1,19 @@
+@var-duration: .4s;
+.transition(@duration: @var-duration) {
+  // no prefix
+  // ease-in-out is useful
+  transition: all @duration ease-in-out;
+}
+
+.transition-bezier(@duration: @var-duration) {
+  // number is copy
+  transition: all @var-duration cubic-bezier(0, 1.35, 0.5, 1.7);
+}
+
+.transition {
+  .transition;
+}
+
+.transition-bezier {
+  .transition-bezier;
+}

@@ -20,8 +20,16 @@
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
+// will have a `>` loop?
+.text-shadow-loop(@a, @b, @c, @d, @var, @stop) when (@@var < @stop) {
+  text-shadow+: @a @b @c @d;
+  .text-shadow-loop(@a, @b + 1, @c, @d - #111, @var, @stop);
+}
+
 .text-shadow-3d() {
-  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+  //text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+  .text-shadow-loop(0px, 1px, 0px, #999, b, 8);
+  text-shadow+: 0 8px 7px #000;
 }
 
 // where to write
