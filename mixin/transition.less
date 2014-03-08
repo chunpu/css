@@ -17,3 +17,14 @@
 .transition-bezier {
   .transition-bezier;
 }
+
+// simple pop effect by transition
+.pop(@scale: 2) {
+  .transition-bezier(.25);
+  -webkit-transform: scale(@scale);
+  transform: scale(@scale);
+}
+
+.pop {
+  .pop;
+}
